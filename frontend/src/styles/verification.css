@@ -1,0 +1,141 @@
+.verification-page {
+  width: 100%;
+}
+
+.verification-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.verification-stat {
+  background: #10172b;
+  border: 1px solid #1c2743;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.verification-stat span {
+  display: block;
+  color: #8994b3;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.verification-stat strong {
+  font-size: 27px;
+}
+
+.verification-card {
+  background: #10172b;
+  border: 1px solid #1c2743;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.verification-toolbar {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #1c2743;
+}
+
+.verification-toolbar input,
+.verification-toolbar select {
+  background: #080d1c;
+  border: 1px solid #273352;
+  color: white;
+  border-radius: 9px;
+  padding: 11px 13px;
+  outline: none;
+}
+
+.verification-toolbar input {
+  flex: 1;
+}
+
+.logs-header,
+.log-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr 70px;
+  align-items: center;
+  gap: 20px;
+  padding: 17px 22px;
+}
+
+.logs-header {
+  color: #8994b3;
+  font-size: 13px;
+  border-bottom: 1px solid #1c2743;
+}
+
+.log-row {
+  border-bottom: 1px solid #1c2743;
+  font-size: 14px;
+}
+
+.log-row:last-child {
+  border-bottom: none;
+}
+
+.log-row small {
+  display: block;
+  margin-top: 5px;
+  color: #8994b3;
+}
+
+.log-status {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.log-status.success {
+  background: #08ab2b;
+  color: #fafafa;
+}
+
+.log-status.failed {
+  background: #ee0505;
+  color: #f2edee;
+}
+
+.log-status.pending {
+  background: #0b0903;
+  color: #fac400;
+}
+
+.log-row button {
+  background: transparent;
+  border: 1px solid #303b60;
+  color: #b9c2dd;
+  padding: 7px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.log-row button:hover {
+  background: #1a2340;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .verification-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logs-header {
+    display: none;
+  }
+
+  .log-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .verification-toolbar {
+    flex-direction: column;
+  }
+}
